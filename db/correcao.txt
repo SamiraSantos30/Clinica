@@ -1,0 +1,8 @@
+--Escript da correçao--
+
+Boa noite,
+
+Colar isso no GIT
+
+Especialidade precisa ser tabela lembrando relação N x N
+Cidade e Estado tabela separada

@@ -24,9 +24,9 @@ Route::get('make', [MakeController::class, 'index'])->name('make');
 Route::get('make/create', [MakeController::class, 'create'])->name('make.create');
 Route::post('make', [MakeController::class, 'store'])->name('make.store');
 Route::get('make{make}', [MakeController::class, 'show'])->name('make.show');
-Route::get('/make/{make}/edit', [pacientesController::class, 'edit'])->name('make.edit');
-Route::put('/make/{make}', [pacientesController::class, 'update'])->name('make.update');
-Route::delete('/make/{meke}', [pacientesController::class, 'destroy'])->name('make.destroy');
+Route::get('/make/{make}/edit', [MakeController::class, 'edit'])->name('make.edit');
+Route::put('/make/{make}', [MakeController::class, 'update'])->name('make.update');
+Route::delete('/make/{meke}', [MakeController::class, 'destroy'])->name('make.destroy');
 
 //adm pacientes
 
