@@ -11,6 +11,7 @@ use App\Http\Controllers\pacientesController;
 use App\Http\Controllers\AgendamentosController;
 use App\Http\Controllers\MedicosController;
 
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('about', [AboutController::class, 'index'])->name('about');
