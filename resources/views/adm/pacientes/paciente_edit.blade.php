@@ -47,7 +47,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Atualizar Paciente</button>
-        <a href="{{ route('pacientes') }}" class="btn btn-secondary">Cancelar</a>
+        <a href="{{ route('pacientes.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
 @endsection

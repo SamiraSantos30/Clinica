@@ -11,46 +11,46 @@
 
               <div class="col-md-6 col-sm-6">
                    <!-- CONTACT FORM HERE -->
-                   <form id="appointment-form" role="form" method="post" action="#">
-
-                        <!-- SECTION TITLE -->
-                        <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                             <h2>Marque uma consulta</h2>
+                   <form id="appointment-form" role="form" method="post" action="{{ route('make.store') }}">
+                    @csrf
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                        <h2>Marque uma consulta</h2>
+                    </div>
+                
+                    <div class="wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="col-md-6 col-sm-6">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name" name="nome_contato" placeholder="Full Name">
                         </div>
-
-                        <div class="wow fadeInUp" data-wow-delay="0.8s">
-                             <div class="col-md-6 col-sm-6">
-                                  <label for="name">Nome</label>
-                                  <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
-                             </div>
-
-                             <div class="col-md-6 col-sm-6">
-                                  <label for="email">Email</label>
-                                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
-                             </div>
-
-                             <div class="col-md-6 col-sm-6">
-                                  <label for="date">Date</label>
-                                  <input type="date" name="date" value="" class="form-control">
-                             </div>
-
-                             <div class="col-md-6 col-sm-6">
-                                  <label for="select">Departamento</label>
-                                  <select class="form-control">
-                                       <option>Ginecologista</option>
-                                       <option>nutricionista</option>
-                                  </select>
-                             </div>
-
-                             <div class="col-md-12 col-sm-12">
-                                  <label for="telephone">Celular Para Contato</label>
-                                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
-                                  <label for="Message">Messagem</label>
-                                  <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
-                                  <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
-                             </div>
+                
+                        <div class="col-md-6 col-sm-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email_contato" placeholder="Your Email">
                         </div>
-                  </form>
+                
+                        <div class="col-md-6 col-sm-6">
+                            <label for="date">Date</label>
+                            <input type="date" name="data_contato" value="" class="form-control">
+                        </div>
+                
+                        <div class="col-md-6 col-sm-6">
+                            <label for="select">Departamento</label>
+                            <select name="departamento_contato" class="form-control">
+                                <option>Ginecologista</option>
+                                <option>Nutricionista</option>
+                            </select>
+                        </div>
+                
+                        <div class="col-md-12 col-sm-12">
+                            <label for="telephone">Celular Para Contato</label>
+                            <input type="tel" class="form-control" id="phone" name="tel_contato" placeholder="Phone">
+                            <label for="Message">Mensagem</label>
+                            <textarea class="form-control" rows="5" id="message" name="mensagem_contato" placeholder="Message"></textarea>
+                            <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                        </div>
+                    </div>
+                </form>
+                
               </div>
 
          </div>

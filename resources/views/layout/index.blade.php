@@ -46,7 +46,8 @@ http://www.tooplate.com/view/2098-health
                <div class="row">
 
                     <div class="col-md-4 col-sm-5">
-                         <p>Welcome to a Professional Health Care</p>
+                         
+                         <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
@@ -80,8 +81,8 @@ http://www.tooplate.com/view/2098-health
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="{{ route('home') }}" class="smoothScroll">Clinica</a></li>
                          <li><a href="{{ route('about') }}" class="smoothScroll">Sobre nós</a></li>
-                         <li><a href="{{ route('doctors') }}"  class="smoothScroll">Doutores</a></li>
-                         <li><a href="{{ route('news') }}">opição</a></li>
+                         <li><a href="{{ route('doctors') }}"  class="smoothScroll">opição</a></li>
+                         <li><a href="{{ route('news') }}"></a></li>
                          <li class="appointment-btn"><a href="make">Marque uma consulta</a></li>
                     </ul>
                </div>

@@ -11,8 +11,10 @@ class AgendamentoController extends Controller
      */
     public function index()
     {
-        
+        $agendamento = agendamento::all();
+        return view('telas.agendamento', ['agendamento' => $agendamento]); 
     }
+
 
     /**
      * Show the form for creating a new resource.

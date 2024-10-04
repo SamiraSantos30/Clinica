@@ -18,4 +18,10 @@ class Paciente extends Model
         'endereco_id',
         'mensagem',
     ];
+
+
+public function Paciente()
+{
+    return $this->belongsTo(Paciente::class, 'endereco_id');
+}
 }

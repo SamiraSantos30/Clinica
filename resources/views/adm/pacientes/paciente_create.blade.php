@@ -3,7 +3,7 @@
 
 <h1>Cadastro de cliente:</h1>
 
-<a href="{{ route('pacientes') }}">Ver lista de pacientes</a> <!-- Adicionando o link para a página de pacientes -->
+<a href="{{ route('pacientes.index') }}">Ver lista de pacientes</a> <!-- Adicionando o link para a página de pacientes -->
 
 <form action="{{ route('pacientes.store') }}" method="POST">
     @csrf
@@ -19,7 +19,7 @@
     <label>Email</label>
     <input name="email" type="text">
  
-    <button type="submit">Cadastrar</button>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
 
 @endsection

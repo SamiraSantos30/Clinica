@@ -6,42 +6,30 @@ use App\models\Paciente;
 
 class PacientesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
         $pacientes = paciente::all();
         return view('adm.pacientes.pacientes', ['pacientes' => $pacientes]); 
     }
 
-
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('adm.pacientes.paciente_create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-/**
- * Store a newly created resource in storage.
- */
+
 public function store(Request $request)
 {
-    // Validação dos dados recebidos
+    
     $validatedData = $request->validate([
         'nome' => 'required|string|max:255',
         'data_nascimento' => 'required|date',
         'telefone' => 'required|string|max:255',
-        'email' => 'nullable|email|max:255', // Adiciona o campo email se necessário
+        'email' => 'nullable|email|max:255', 
     ]);
 
-    // Criação de um novo paciente
+    
     $paciente = new Paciente();
     $paciente->nome = $validatedData['nome'];
     $paciente->data_nascimento = $validatedData['data_nascimento'];
@@ -51,38 +39,28 @@ public function store(Request $request)
         $paciente->email = $validatedData['email'];
     }
 
-    // Salvar no banco de dados
+    
     $paciente->save();
 
-    // Retornar uma resposta ou redirecionar
 
-    return redirect()->route('pacientes.create');
+
+    return redirect()->route('pacientes.index');   
 
 }
 
-
-
-
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
-        //
+        
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+  
     public function edit(string $id)
     {
         $paciente = Paciente::findOrFail($id);
         return view('adm.pacientes.paciente_edit', ['paciente' => $paciente]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+  
     public function update(Request $request, $id)
 {
     $request->validate([
@@ -99,18 +77,14 @@ public function store(Request $request)
     $paciente->email = $request->input('email');
     $paciente->save();
 
-    return redirect()->route('pacientes')->with('success', 'Paciente atualizado com sucesso!');
+    return redirect()->route('pacientes.index')->with('success', 'Paciente atualizado com sucesso!');
 }
 
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $paciente = Paciente::findOrFail($id);
         $paciente->delete();
 
-        return redirect()->route('pacientes')->with('success', 'Paciente excluído com sucesso!');
+        return redirect()->route('pacientes.index')->with('success', 'Paciente excluído com sucesso!');
     }
 }

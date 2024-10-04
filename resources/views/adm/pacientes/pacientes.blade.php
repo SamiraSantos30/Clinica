@@ -4,7 +4,7 @@
 
 <h2>Pacientes</h2>
 
-<a href={{ route('pacientes.create') }}>Cadastrar Paciente</a>
+
 
 <div class="table-responsive">
     <table class="table align-items-center table-flush table-borderless">
@@ -25,12 +25,14 @@
                     <td>{{ $linha->telefone }}</td>
                     <td>{{ $linha->email }}</td>
                     <td>
-                        <a href="{{ route('pacientes.edit', $linha->id) }}" class="btn btn-warning">Editar</a> <!-- Link para editar -->
-                        <form action="{{ route('pacientes.destroy', $linha->id) }}" method="POST" style="display:inline;"> <!-- Formulário para excluir -->
+                        <form action="{{ route('pacientes.destroy', $linha->id) }}" method="POST" style="display:inline;"> 
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Excluir</button>
                         </form>
+
+                        <a href="{{ route('pacientes.edit', $linha->id) }}" class="btn btn-primary">Editar</a> 
+                     
                     </td>
                 </tr>
             @endforeach

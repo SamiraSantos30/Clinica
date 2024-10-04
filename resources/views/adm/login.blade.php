@@ -20,7 +20,6 @@
   <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet"/>
-  
 </head>
 
 <body class="bg-theme bg-theme1">
@@ -35,58 +34,55 @@
  <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
 	<div class="card card-authentication1 mx-auto my-5">
 		<div class="card-body">
-		 <div class="card-content p-2">
+		  <div class="card-content p-2">
 		 	<div class="text-center">
-		 		<img src="assets/images/logo-icon.png" alt="logo icon">
+		 		<img src="images/logo.png" alt="logo icon">
 		 	</div>
 		  <div class="card-title text-uppercase text-center py-3">Sign In</div>
-		    <form>
-			  <div class="form-group">
-			  <label for="exampleInputUsername" class="sr-only">Username</label>
-			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputUsername" class="form-control input-shadow" placeholder="Enter Username">
-				  <div class="form-control-position">
-					  <i class="icon-user"></i>
-				  </div>
-			   </div>
-			  </div>
-			  <div class="form-group">
-			  <label for="exampleInputPassword" class="sr-only">Password</label>
-			   <div class="position-relative has-icon-right">
-				  <input type="password" id="exampleInputPassword" class="form-control input-shadow" placeholder="Enter Password">
-				  <div class="form-control-position">
-					  <i class="icon-lock"></i>
-				  </div>
-			   </div>
-			  </div>
-			<div class="form-row">
-			 <div class="form-group col-6">
-			   <div class="icheck-material-white">
-                <input type="checkbox" id="user-checkbox" checked="" />
-                <label for="user-checkbox">Remember me</label>
-			  </div>
-			 </div>
-			 <div class="form-group col-6 text-right">
-			  <a href="reset-password.html">Reset Password</a>
-			 </div>
-			</div>
-			 <button type="button" class="btn btn-light btn-block">Sign In</button>
-			  <div class="text-center mt-3">Sign In With</div>
-			  
-			 <div class="form-row mt-4">
-			  <div class="form-group mb-0 col-6">
-			   <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> Facebook</button>
-			 </div>
-			 <div class="form-group mb-0 col-6 text-right">
-			  <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Twitter</button>
-			 </div>
-			</div>
-			 
-			 </form>
+      <form id="loginForm" method="POST" action="{{ route('login') }}">
+        @csrf
+        <div class="form-group">
+            <label for="exampleInputUsername" class="sr-only">Email</label>
+            <div class="position-relative has-icon-right">
+                <input name="email" type="email" id="exampleInputUsername" name="email" class="form-control input-shadow" placeholder="E-mail" required>
+                <div class="form-control-position">
+                    <i class="icon-user"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputPassword" class="sr-only">Password</label>
+            <div class="position-relative has-icon-right">
+                <input name="password" type="password" id="exampleInputPassword" name="senha" class="form-control input-shadow" placeholder="Enter Password" required>
+                <div class="form-control-position">
+                    <i class="icon-lock"></i>
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="form-group col-6">
+                <div class="icheck-material-white">
+                    <input type="checkbox" id="user-checkbox" />
+                    <label for="user-checkbox">Remember me</label>
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-light btn-block">Sign In</button>
+        
+        <div id="error-message" class="text-danger text-center mt-3">
+            @error('ERRO')
+                <span>{{ $message }}</span>
+            @enderror
+        </div>
+    </form>
+  
 		   </div>
 		  </div>
 		  <div class="card-footer text-center py-3">
-		    <p class="text-warning mb-0">Do not have an account? <a href="register.html"> Sign Up here</a></p>
+		    <p class="text-warning mb-0">Do not have an account? <a href="{{ route('registrar')}}"> Sign Up here</a></p>
 		  </div>
 	     </div>
     
