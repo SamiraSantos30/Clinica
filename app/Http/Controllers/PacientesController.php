@@ -76,22 +76,41 @@ public function store(Request $request)
      */
     public function edit(string $id)
     {
-        
+        $paciente = Paciente::findOrFail($id);
+        return view('adm.pacientes.paciente_edit', ['paciente' => $paciente]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        
-    }
+    public function update(Request $request, $id)
+{
+    $request->validate([
+        'nome' => 'required|string|max:255',
+        'data_nascimento' => 'required|date',
+        'telefone' => 'required|string|max:15',
+        'email' => 'nullable|email|max:255',
+    ]);
+
+    $paciente = Paciente::findOrFail($id);
+    $paciente->nome = $request->input('nome');
+    $paciente->data_nascimento = $request->input('data_nascimento');
+    $paciente->telefone = $request->input('telefone');
+    $paciente->email = $request->input('email');
+    $paciente->save();
+
+    return redirect()->route('pacientes')->with('success', 'Paciente atualizado com sucesso!');
+}
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $paciente = Paciente::findOrFail($id);
+        $paciente->delete();
+
+        return redirect()->route('pacientes')->with('success', 'Paciente excluído com sucesso!');
     }
 }
