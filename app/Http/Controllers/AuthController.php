@@ -50,8 +50,4 @@ class AuthController extends Controller
         // Redirecionar ou retornar uma resposta
         return view('adm.login');
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3b20195 (Clinica)
