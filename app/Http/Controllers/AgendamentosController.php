@@ -1,30 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
-<<<<<<< HEAD
+
 
 use Illuminate\Http\Request;
 
 class AgendamentoController extends Controller
-=======
+
 use Illuminate\Http\Request;
 use App\Models\Agendamento;
 
 class AgendamentosController extends Controller
->>>>>>> 3b20195 (Clinica)
+
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-<<<<<<< HEAD
+
         $agendamento = agendamento::all();
         return view('telas.agendamento', ['agendamento' => $agendamento]); 
-=======
+
         $agendamentos = Agendamento::all();
         return view('telas.agendamento', ['agendamentos' => $agendamentos]); 
->>>>>>> 3b20195 (Clinica)
+
     }
 
 
@@ -75,8 +75,8 @@ class AgendamentosController extends Controller
     {
         //
     }
-<<<<<<< HEAD
+
 }
-=======
+
 }
->>>>>>> 3b20195 (Clinica)
+
