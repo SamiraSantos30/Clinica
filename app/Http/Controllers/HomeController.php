@@ -10,9 +10,4 @@ class HomeController extends Controller
     {
         return view('telas.conteudo');
     }
-<<<<<<< HEAD
-=======
-
-  
->>>>>>> 3b20195 (Clinica)
 }
