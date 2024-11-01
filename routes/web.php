@@ -8,27 +8,15 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\MakeController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PacientesController;
-use App\Http\Controllers\AgendamentosController;
+use App\Http\Controllers\AgendamentoController;
 use App\Http\Controllers\MedicosController;
 use App\Http\Controllers\AdmController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AuthController;
-<<<<<<< HEAD
 
 Route::middleware('auth')->group(function () {
 
     //adm pacientes
-=======
-use App\Http\Controllers\EventController;
-
-
-Route::middleware('auth')->group(function () {
-
- 
-
-    
-
->>>>>>> 3b20195 (Clinica)
 
     Route::get('/pacientes', [pacientesController::class, 'index'])->name('pacientes.index');
     Route::get('/pacientes/create', [pacientesController::class, 'create'])->name('pacientes.create');
@@ -40,13 +28,13 @@ Route::middleware('auth')->group(function () {
 
     //agendamentos
 
-    Route::get('/agendamentos', [AgendamentosController::class, 'index'])->name('agendamentos');
-    Route::get('/agendamentos/create', [AgendamentosController::class, 'create'])->name('agendamentos.create');
-    Route::post('/agendamentos', [AgendamentosController::class, 'store'])->name('agendamentos.store');
-    Route::get('/agendamentos/{agendamento}', [AgendamentosController::class, 'show'])->name('agendamentoss.show');
-    Route::get('/agendamentos/{agendamento}/edit', [AgendamentosController::class, 'edit'])->name('agendamentoss.edit');
-    Route::put('/agendamentos/{agendamento}', [AgendamentosController::class, 'update'])->name('agendamentos.update');
-    Route::delete('/agendamentos/{agendamento}', [AgendamentosController::class, 'destroy'])->name('agendamentos.destroy');
+    Route::get('/agendamentos', [AgendamentoController::class, 'index'])->name('agendamentos');
+    Route::get('/agendamentos/create', [AgendamentoController::class, 'create'])->name('agendamentos.create');
+    Route::post('/agendamentos', [AgendamentoController::class, 'store'])->name('agendamentos.store');
+    Route::get('/agendamentos/{agendamento}', [AgendamentoController::class, 'show'])->name('agendamentoss.show');
+    Route::get('/agendamentos/{agendamento}/edit', [AgendamentoController::class, 'edit'])->name('agendamentoss.edit');
+    Route::put('/agendamentos/{agendamento}', [AgendamentoController::class, 'update'])->name('agendamentos.update');
+    Route::delete('/agendamentos/{agendamento}', [AgendamentoController::class, 'destroy'])->name('agendamentos.destroy');
 
     //medicos
 
@@ -72,13 +60,10 @@ Route::post('/registrar', [AuthController::class, 'registrar'])->name('registrar
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> 3b20195 (Clinica)
 //adm
 Route::get('/adiministrador', [AdmController::class, 'index'])->name('administrador');
 
