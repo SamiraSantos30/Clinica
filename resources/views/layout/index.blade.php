@@ -47,7 +47,7 @@ http://www.tooplate.com/view/2098-health
 
                     <div class="col-md-4 col-sm-5">
                          
-                         <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
+                         <a href="index.html" class="navbar-brand"><i class=""></i>CLINICA</a>
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
@@ -73,7 +73,7 @@ http://www.tooplate.com/view/2098-health
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
+                    <a href="index.html" class="navbar-brand"><i class=""></i></a>
                </div>
 
                <!-- MENU LINKS -->
