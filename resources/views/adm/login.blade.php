@@ -142,4 +142,8 @@
   <script src="assets/js/app-script.js"></script>
   
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 3b20195 (Clinica)

@@ -13,10 +13,22 @@ use App\Http\Controllers\MedicosController;
 use App\Http\Controllers\AdmController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AuthController;
+<<<<<<< HEAD
 
 Route::middleware('auth')->group(function () {
 
     //adm pacientes
+=======
+use App\Http\Controllers\EventController;
+
+
+Route::middleware('auth')->group(function () {
+
+ 
+
+    
+
+>>>>>>> 3b20195 (Clinica)
 
     Route::get('/pacientes', [pacientesController::class, 'index'])->name('pacientes.index');
     Route::get('/pacientes/create', [pacientesController::class, 'create'])->name('pacientes.create');
@@ -60,10 +72,13 @@ Route::post('/registrar', [AuthController::class, 'registrar'])->name('registrar
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 3b20195 (Clinica)
 //adm
 Route::get('/adiministrador', [AdmController::class, 'index'])->name('administrador');
 

@@ -61,4 +61,8 @@ class MedicosController extends Controller
     {
         //
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3b20195 (Clinica)

@@ -1,3 +1,7 @@
 *
+<<<<<<< HEAD
+=======
+!private/
+>>>>>>> 3b20195 (Clinica)
 !public/
 !.gitignore

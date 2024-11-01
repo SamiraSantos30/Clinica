@@ -10,4 +10,8 @@ class AdmController extends Controller
     {
         return view('layout.indexAdm');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3b20195 (Clinica)

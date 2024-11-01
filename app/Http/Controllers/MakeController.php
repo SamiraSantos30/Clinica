@@ -33,4 +33,8 @@ class MakeController extends Controller
 
         return redirect()->route('make.create')->with('success', 'Consulta marcada com sucesso!');
     }
+<<<<<<< HEAD
 }   
+=======
+}   
+>>>>>>> 3b20195 (Clinica)

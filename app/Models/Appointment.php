@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Appointment extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3b20195 (Clinica)

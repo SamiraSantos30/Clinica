@@ -47,7 +47,11 @@ http://www.tooplate.com/view/2098-health
 
                     <div class="col-md-4 col-sm-5">
                          
+<<<<<<< HEAD
                          <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
+=======
+                         <a href="" class="navbar-brand"><i class=""></i>CLINICA</a>
+>>>>>>> 3b20195 (Clinica)
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
@@ -82,7 +86,10 @@ http://www.tooplate.com/view/2098-health
                          <li><a href="{{ route('home') }}" class="smoothScroll">Clinica</a></li>
                          <li><a href="{{ route('about') }}" class="smoothScroll">Sobre nós</a></li>
                          <li><a href="{{ route('doctors') }}"  class="smoothScroll">opição</a></li>
+<<<<<<< HEAD
                          <li><a href="{{ route('news') }}"></a></li>
+=======
+>>>>>>> 3b20195 (Clinica)
                          <li class="appointment-btn"><a href="make">Marque uma consulta</a></li>
                     </ul>
                </div>

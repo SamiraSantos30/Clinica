@@ -14,4 +14,8 @@ class Login extends Authenticatable
 
  
     protected $hidden = ['senha'];
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3b20195 (Clinica)
